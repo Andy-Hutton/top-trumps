@@ -1,0 +1,71 @@
+body {
+  margin: 0;
+  font-family: system-ui, monospace, "Courier New", Courier;  
+  /* background-image: url("../images/page background.jpg"); */
+  /* padding-top: 00px; */
+}
+
+.hero {
+background-color: grey;
+color: rgb(155, 212, 250);
+font-weight: bolder;
+background-image: url("../images/cornersmall.jpg");
+padding-top: 100px;
+padding-bottom: 80px;
+
+}
+h1 {
+  
+}
+
+.container{
+max-width: 960px;
+margin-left: auto;
+margin-right: auto;
+padding-left: 1rem;
+padding-right: 1rem;
+
+}
+
+main{
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  background-image: url("images/page background.jpg");
+  padding: 1rem;
+  margin: 1rem;
+}
+
+.nav-bar {border: solid 2px black;
+  color: white;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+ul {border: solid 2px black;
+}
+
+.accessable {border: solid 2px black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.race {border: solid 2px black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.theo {border: solid 2px black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+footer {border: solid 2px black;
+  position: absolute;
+  max-height: 1rem;
+}
