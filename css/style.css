@@ -1,31 +1,62 @@
 body {
+  background: rgb(6,6,6);
+background: linear-gradient(160deg, rgba(6,6,6,1) 0%, rgba(171,175,165,1) 40%, rgba(244,34,7,1) 50%, rgba(134,134,134,1) 60%, rgba(6,6,6,1) 100%);
   margin: 0;
-  font-family: system-ui, monospace, "Courier New", Courier;  
+  font-family: system-ui, monospace, "Courier New", Courier; 
   /* background-image: url("../images/page background.jpg"); */
   /* padding-top: 00px; */
 }
 
 .hero {
-font-size: 4rem;
+
 background-color: grey;
 color: rgb(176, 214, 240);
 font-weight: bolder;
 background-image: url("../images/cornersmall.jpg");
-padding-top: 5px;
-padding-bottom: 5px;
+padding-top: 70px;
+padding-bottom: 60px;
 
 }
 h1 {
-  
+  font-size: 4rem;
 }
 
-.container{
+.carContainer{
+  background-image: url(../images/pagebackground.jpg);
+  border: 5px  solid rgb(86, 2, 2);
 max-width: 960px;
 margin-left: auto;
 margin-right: auto;
 padding-left: 1rem;
 padding-right: 1rem;
+display: flex;
+flex-wrap: wrap;
 
+}
+#player1{
+  background-color: rgba(0,0,0,.5);
+  color: white;
+  font-weight: bolder;
+  text-shadow: black 1px 1px 1px;
+  border: solid 2px black;
+  padding: 1rem;
+  margin: 1rem;
+}
+#img1{
+  max-width: 300px;
+  max-height: 215px;
+}
+#player2{
+  background-color: rgba(0,0,0,.5);
+  color: white;
+  font-weight: bolder;
+  text-shadow: black 1px 1px 1px;
+  border: solid 2px black;
+  padding: 1rem;
+  margin: 1rem;}
+#img2{
+  max-width: 300px;
+  max-height: 215px;
 }
 
 main{
@@ -37,16 +68,29 @@ main{
   margin: 1rem;
 }
 
-.nav-bar {border: solid 2px black;
-  color: white;
-  background-color: black;
+.navi {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  align-items: column;
+  flex: 1;
+  justify-content: flex-start(y);
+  background-color: lightgray;
+  border: solid 2px black;
+  position: fixed;
+  width: 10%;
+  height: 300px;
 }
 
-ul {border: solid 2px black;
+.navi ul {
+  display: flex;
+justify-content:flex-start
+flex: .3;
 }
+
+.navi ul li{
+  
+  border-radius: 7px;
+}
+
 
 .accessable {border: solid 2px black;
   display: flex;
@@ -66,7 +110,11 @@ ul {border: solid 2px black;
   align-items: center;
 }
 
-footer {border: solid 2px black;
-  position: absolute;
-  max-height: 1rem;
+footer {
+  background-image: url("../images/seamless-asphalt.jpg");
+  /* min-width: fit-content; */
+  border: solid 2px black;
+  position: static;
+  padding-top: 70px;
+padding-bottom: 60px;
 }
