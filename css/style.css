@@ -6,12 +6,13 @@ body {
 }
 
 .hero {
+font-size: 4rem;
 background-color: grey;
-color: rgb(155, 212, 250);
+color: rgb(176, 214, 240);
 font-weight: bolder;
 background-image: url("../images/cornersmall.jpg");
-padding-top: 100px;
-padding-bottom: 80px;
+padding-top: 5px;
+padding-bottom: 5px;
 
 }
 h1 {
