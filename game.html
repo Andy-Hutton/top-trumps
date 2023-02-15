@@ -1,64 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./css/reset.css" />
     <link rel="stylesheet" href="./css/style.css" />
     <title>Skid Marks Game</title>
-</head>
-<body>
+  </head>
+  <body>
     <div class="hero">
-    <h1>Skid Marks</h1>
-<p>Leave only skid marks on the tarmac behind you, your future is up ahead!  </p> 
-</div>
-
-<main>
-    <div class="navi">
-        <h2>Links</h2>
-        <ul>
-          <li><button><a href="index.html">Home</a></button></li>
-        <li><button><a href="game.html">Game</a></button></li>
-      <li><button><a href="resource.html">Resources</a></button></li>
-    <li><button><a href="shop.html">shop</a></button></li>
-    </ul>
+      <h1>Skid Marks</h1>
+      <p>
+        Leave only skid marks on the tarmac behind you, your future is up ahead!
+      </p>
     </div>
 
-<div class="carContainer">
-        
-    <div id="player1">
-                <img id="img1" />
-                <p>Model</p>
-                <p id="h1name"></p>
-                <p>Year</p>
-            <p id="h1year"></p>
-            <p>BHP</p>
-            <p id="h1bhp"></p>
-            <p>Seconds 0-60MPH</p>
-            <p id="h1acel"></p>
-            </div>
-          <div id="player2">
-            <img id="img2" />
-            <p>Model</p>
-            <p id="h2name"></p>
-            <p>Year</p>
-            <p id="h2year"></p>
-            <p>BHP</p>
-            <p id="h2bhp"></p>
-            <p>Seconds 0-60MPH</p>
-            <p id="h2acel"></p>
-</div>
-        </div>
-        <div><h2>View Results</h2></div>
-      <canvas id="myChart"></canvas>
+    <main>
+      <div class="navi">
+        <h2>Links</h2>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="game.html">Game</a></li>
+          <li><a href="resource.html">Resources</a></li>
+          <li><a href="shop.html">shop</a></li>
+        </ul>
+      </div>
 
-</main>
-<footer>
-    <button>
-      <a href="https://www.justgiving.com/campaign/theosfight"> 2023 Andy Hutton ©</a>
-    </button>
-  </footer>
+      <section>
+        <div id="cContainer1">
+          <img id="img1" />
+          <p>Model</p>
+          <p id="h1name"></p>
+          <p>Year</p>
+          <p id="h1year"></p>
+          <p>BHP</p>
+          <p id="h1bhp"></p>
+          <p>Seconds 0-60MPH</p>
+          <p id="h1acel"></p>
+        </div>
+        <div id="cContainer2">
+          <img id="img2" />
+          <p>Model</p>
+          <p id="h2name"></p>
+          <p>Year</p>
+          <p id="h2year"></p>
+          <p>BHP</p>
+          <p id="h2bhp"></p>
+          <p>Seconds 0-60MPH</p>
+          <p id="h2acel"></p>
+        </div>
+      </section>
+      <div><button id="ViewResults">View-Results</button></div>
+      <!-- <canvas id="myResults"></canvas> -->
+      <div id="chart-container"></div>
+      <canvas id="chart"></canvas>
+    </main>
+    <footer>
+      <a href="https://www.justgiving.com/campaign/theosfight">
+        2023 Andy Hutton ©</a
+      >
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="./js/game.js"></script>
-</body>
+  </body>
 </html>

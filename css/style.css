@@ -1,110 +1,149 @@
 body {
-  background: rgb(6,6,6);
-background: linear-gradient(160deg, rgba(6,6,6,1) 0%, rgba(171,175,165,1) 40%, rgba(244,34,7,1) 50%, rgba(134,134,134,1) 60%, rgba(6,6,6,1) 100%);
+  background: rgb(6, 6, 6);
+  background: linear-gradient(
+    160deg,
+    rgba(6, 6, 6, 1) 0%,
+    rgba(171, 175, 165, 1) 40%,
+    rgba(244, 34, 7, 1) 50%,
+    rgba(134, 134, 134, 1) 60%,
+    rgba(6, 6, 6, 1) 100%
+  );
   margin: 0;
-  font-family: system-ui, monospace, "Courier New", Courier; 
+  font-family: system-ui, monospace, "Courier New", Courier;
   /* background-image: url("../images/page background.jpg"); */
   /* padding-top: 00px; */
 }
 
 .hero {
-
-background-color: grey;
-color: rgb(176, 214, 240);
-font-weight: bolder;
-background-image: url("../images/cornersmall.jpg");
-padding-top: 70px;
-padding-bottom: 60px;
-
+  background-color: grey;
+  color: rgb(176, 214, 240);
+  font-weight: bolder;
+  background-image: url("../images/cornersmall.jpg");
+  padding-top: 70px;
+  padding-bottom: 60px;
 }
 h1 {
-  font-size: 4rem;
+  text-decoration: underline;
+  position: absolute;
+
+  top: 10px;
+  left: 20px;
+  animation-name: slideInLeft;
+  animation-duration: 5s;
+  animation-timing-function: ease-in;
+  animation-delay: 1s;
+  font-size: 3rem;
+  text-shadow: gainsboro 2px 2px 5px;
 }
 
-.carContainer{
+@keyframes slideInLeft {
+  from {
+    transform: translateX(-200px);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+/* .carContainer {
   background-image: url(../images/pagebackground.jpg);
-  border: 5px  solid rgb(86, 2, 2);
-max-width: 960px;
-margin-left: auto;
-margin-right: auto;
-padding-left: 1rem;
-padding-right: 1rem;
-display: flex;
-flex-wrap: wrap;
-
-}
-#player1{
-  background-color: rgba(0,0,0,.5);
-  color: white;
-  font-weight: bolder;
-  text-shadow: black 1px 1px 1px;
-  border: solid 2px black;
-  padding: 1rem;
-  margin: 1rem;
-}
-#img1{
-  max-width: 300px;
-  max-height: 215px;
-}
-#player2{
-  background-color: rgba(0,0,0,.5);
-  color: white;
-  font-weight: bolder;
-  text-shadow: black 1px 1px 1px;
-  border: solid 2px black;
-  padding: 1rem;
-  margin: 1rem;}
-#img2{
-  max-width: 300px;
-  max-height: 215px;
-}
-
-main{
+  border: 5px solid rgb(86, 2, 2);
+  max-width: 960px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
   display: flex;
-  flex-wrap: nowrap;
-  justify-content: space-between;
-  background-image: url("images/page background.jpg");
+  flex-wrap: wrap;
+} */
+#cContainer1 {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  font-weight: bolder;
+  text-shadow: black 1px 1px 1px;
+  border: solid 2px black;
   padding: 1rem;
   margin: 1rem;
+  transition-duration: 1s;
+  transition-delay: 0s;
+}
+#cContainer1:hover {
+  transform: scale(1.2);
+  color: white;
+  background-color: black;
+  cursor: pointer;
+}
+#img1 {
+  max-width: 300px;
+  max-height: 215px;
+}
+#cContainer2 {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  font-weight: bolder;
+  text-shadow: black 1px 1px 1px;
+  border: solid 2px black;
+  padding: 1rem;
+  margin: 1rem;
+  transition-duration: 1s;
+  transition-delay: 0s;
+}
+#cContainer2:hover {
+  transform: scale(1.2);
+  color: white;
+  background-color: black;
+  cursor: pointer;
+}
+#img2 {
+  max-width: 300px;
+  max-height: 215px;
+}
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  padding: 2rem;
+  margin: 2rem;
 }
 
 .navi {
   display: flex;
-  align-items: column;
-  flex: 1;
-  justify-content: flex-start(y);
+  flex-direction: column;
+  justify-content: left;
   background-color: lightgray;
   border: solid 2px black;
-  position: fixed;
+  border-radius: 7px;
+  position: relative;
   width: 10%;
   height: 300px;
 }
 
 .navi ul {
   display: flex;
-justify-content:flex-start
-flex: .3;
+  flex-direction: column;
 }
 
-.navi ul li{
-  
-  border-radius: 7px;
+.navi ul li {
+  justify-content: space-;
 }
 
-
-.accessable {border: solid 2px black;
+.accessable {
+  border: solid 2px black;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.race {border: solid 2px black;
+.race {
+  border: solid 2px black;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.theo {border: solid 2px black;
+.theo {
+  border: solid 2px black;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -116,5 +155,5 @@ footer {
   border: solid 2px black;
   position: static;
   padding-top: 70px;
-padding-bottom: 60px;
+  padding-bottom: 60px;
 }
