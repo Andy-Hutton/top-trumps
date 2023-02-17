@@ -1,7 +1,7 @@
 body {
   background: rgb(6, 6, 6);
   background: linear-gradient(
-    160deg,
+    20deg,
     rgba(6, 6, 6, 1) 0%,
     rgba(171, 175, 165, 1) 40%,
     rgba(244, 34, 7, 1) 50%,
@@ -10,13 +10,11 @@ body {
   );
   margin: 0;
   font-family: system-ui, monospace, "Courier New", Courier;
-  /* background-image: url("../images/page background.jpg"); */
-  /* padding-top: 00px; */
 }
 
 .hero {
   background-color: grey;
-  color: rgb(176, 214, 240);
+  color: rgb(122, 198, 248);
   font-weight: bolder;
   background-image: url("../images/cornersmall.jpg");
   padding-top: 70px;
@@ -33,7 +31,7 @@ h1 {
   animation-timing-function: ease-in;
   animation-delay: 1s;
   font-size: 3rem;
-  text-shadow: gainsboro 2px 2px 5px;
+  text-shadow: gainsboro 2px 6px 5px;
 }
 
 @keyframes slideInLeft {
@@ -44,55 +42,44 @@ h1 {
     transform: translateX(0);
   }
 }
-/* .carContainer {
-  background-image: url(../images/pagebackground.jpg);
-  border: 5px solid rgb(86, 2, 2);
-  max-width: 960px;
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 1rem;
-  padding-right: 1rem;
-  display: flex;
-  flex-wrap: wrap;
-} */
-#cContainer1 {
+
+.container {
   background-color: rgba(0, 0, 0, 0.5);
   color: white;
-  font-weight: bolder;
-  text-shadow: black 1px 1px 1px;
+  display: flex;
   border: solid 2px black;
   padding: 1rem;
   margin: 1rem;
   transition-duration: 1s;
   transition-delay: 0s;
 }
-#cContainer1:hover {
-  transform: scale(1.2);
-  color: white;
-  border: solid 3px red;
-  background-color: black;
+h2 {
+  font-weight: bolder;
+  padding-right: 1rem;
+}
+.race {
+  padding: 1rem;
+  margin: 1rem;
+}
+.race:hover {
+  transform: scale(1.1);
+  color: black;
+  background-color: white;
   cursor: pointer;
 }
 #img1 {
   max-width: 300px;
   max-height: 215px;
 }
-#cContainer2 {
-  background-color: rgba(0, 0, 0, 0.5);
-  color: white;
-  font-weight: bolder;
-  text-shadow: black 1px 1px 1px;
-  border: solid 2px black;
+
+.theo {
   padding: 1rem;
   margin: 1rem;
-  transition-duration: 1s;
-  transition-delay: 0s;
 }
-#cContainer2:hover {
-  transform: scale(1.2);
-  color: white;
-  border: solid 3px red;
-  background-color: black;
+.theo:hover {
+  transform: scale(1.1);
+  color: black;
+  background-color: white;
   cursor: pointer;
 }
 #img2 {
@@ -102,7 +89,7 @@ h1 {
 
 main {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: row;
   justify-content: space-between;
 
   padding: 2rem;
@@ -133,7 +120,6 @@ main {
 li {
   justify-content: space-around;
 }
-
 .race {
   border: solid 2px black;
   display: flex;
@@ -141,20 +127,12 @@ li {
   align-items: center;
 }
 
-.accessable {
+.theo {
   border: solid 2px black;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-
-.race {
-  border: solid 2px black;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 .theo {
   border: solid 2px black;
   display: flex;
@@ -171,7 +149,7 @@ li {
   text-decoration: none;
   outline: none;
   color: #fff;
-  background-color: goldenrod;
+  background-color: gold;
   border-radius: 25px;
   box-shadow: 0 9px #999;
 }
@@ -182,6 +160,22 @@ li {
   background-color: goldenrod;
   box-shadow: 0 5px #666;
   transform: translateY(4px);
+}
+
+.theo1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.theosimg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
 }
 
 footer {

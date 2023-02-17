@@ -15,7 +15,7 @@ const cContainer2 = document.getElementById("cContainer2");
 // let resultButton = document.querySelector("carContainer + div");
 
 let clicks = 0;
-let maxClicksAllowed = 10;
+let maxClicksAllowed = 20;
 
 function SkidMarks(name, year, bhp, acel, img) {
   this.name = name;
@@ -142,8 +142,8 @@ function handleCarClick1(event) {
   console.log(event.target);
   console.log(hand1[0]);
   hand1[0].clicks++;
-  var first = hand1.splice(0, 1);
-  hand1.push(first[0]);
+  let removed = hand1.splice(1, 1);
+  hand1.push(removed[0]);
   // move the second item in the [ ] to the end
   if (clicks === maxClicksAllowed) {
     alert("Thanks for voting! Click View Results to see which car won!");
@@ -159,9 +159,9 @@ function handleCarClick2(event) {
   clicks++;
   console.log(event.target);
   console.log(hand1[0]);
-  hand1[0].clicks++;
-  var first = hand1.splice(0, 1);
-  hand1.push(first[0]);
+  hand1[1].clicks++;
+  let removed = hand1.splice(0, 1);
+  hand1.push(removed[0]);
   // move the second item in the [ ] to the end
   if (clicks === maxClicksAllowed) {
     alert("Thanks for voting! Click View Results to see which car won!");
@@ -182,6 +182,8 @@ function renderResults() {
     li.textContent = `${hand1[i].name} had ${hand1[i].views} view and was clicked ${hand1[i].clicks} times.`;
     ul.appendChild(li);
   }
+  resultButton.removeEventListener("click", renderResults);
+  renderChart();
 }
 
 // MVP ALL ABOVE
@@ -192,10 +194,10 @@ function renderChart() {
   let viewsData = [];
   let clicksData = [];
 
-  for (let i = 0; i < SkidMarks.hand1.length; i++) {
-    labels.push(SkidMarks.hand1[i].name);
-    viewsData.push(SkidMarks.hand1[i].views);
-    clicksData.push(SkidMarks.hand1[i].clicks);
+  for (let i = 0; i < hand1.length; i++) {
+    labels.push(hand1[i].name);
+    viewsData.push(hand1[i].views);
+    clicksData.push(hand1[i].clicks);
   }
 
   const data = {
@@ -219,4 +221,3 @@ function renderChart() {
   };
   new Chart(myChart, config);
 }
-renderImages();
